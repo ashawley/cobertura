@@ -1612,7 +1612,7 @@
                     <!-- Enforce not importing incorrect projects. -->
                     <plugin>
                         <artifactId>maven-enforcer-plugin</artifactId>
-                        <version>1.3.1</version>
+                        <version>1.4.1</version>
                         <executions>
                             <execution>
                                 <id>enforce-imports</id>
