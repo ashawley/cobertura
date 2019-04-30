@@ -292,7 +292,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>${plugin.jdoc.version}</version>
                 <configuration>
                     <stylesheet>java</stylesheet>
                 </configuration>
