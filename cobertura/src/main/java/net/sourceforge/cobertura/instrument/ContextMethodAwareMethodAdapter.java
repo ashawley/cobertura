@@ -52,7 +52,7 @@ public abstract class ContextMethodAwareMethodAdapter extends MethodVisitor {
 
 	/**
 	 * Generator that assigns unique (in scope of single class) identifiers to every LINENUMBER asm derective.
-	 * <p/>
+	 *
 	 * <p>We will use this 'generator' to provide this identifiers. Remember to acquire identifiers using {@link AtomicInteger#incrementAndGet()} (not {@link AtomicInteger#getAndIncrement()}!!!)</p>
 	 */
 	protected final AtomicInteger lineIdGenerator;

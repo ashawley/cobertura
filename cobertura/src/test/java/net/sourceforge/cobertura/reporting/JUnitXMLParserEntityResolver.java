@@ -38,7 +38,7 @@ import java.io.FileNotFoundException;
  * XML documents on the Internet.  Instead we use a local
  * copy of the DTD.
  * </p>
- * <p/>
+ *
  * <p>
  * This is done so that the XMLReportTest.java JUnit test will
  * not fail when the test is run on a non-networked machine,

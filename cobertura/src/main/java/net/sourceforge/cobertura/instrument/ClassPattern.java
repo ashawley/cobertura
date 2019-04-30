@@ -35,7 +35,7 @@ import org.apache.oro.text.regex.Pattern;
 /**
  * This class represents a collection of regular expressions that will be used to see
  * if a classname matches them.
- * <p/>
+ *
  * Regular expressions are specified by calling add methods.  If no add methods are
  * called, this class will match any classname.
  *
@@ -61,9 +61,9 @@ public class ClassPattern {
 
 	/**
 	 * Check to see if a class matches this ClassPattern
-	 * <p/>
+	 *
 	 * If a pattern has not been specified, this matches anything.
-	 * <p/>
+	 *
 	 * This method also looks for "WEB-INF/classes" at the beginning of the
 	 * classname.  It is removed before checking for a match.
 	 *

@@ -32,7 +32,7 @@ import org.objectweb.asm.MethodVisitor;
 /**
  * Universal API for all methods that are responsible for generating any JASM code that have
  * to be injected into real classes.
- * <p/>
+ *
  * The general idea is that injected code is responsible for incrementing counters. The realization of counters
  * is implementation dependent.
  *
@@ -58,7 +58,7 @@ public interface CodeProvider {
 	/**
 	 * Name of a method that have to be injected into instrumented class that is responsible for reading
 	 * value of given counter.
-	 * <p/>
+	 *
 	 * Signature of this method is: int[] __cobertura_counter(int counterId);
 	 */
 	public static final String COBERTURA_GET_AND_RESET_COUNTERS_METHOD_NAME = "__cobertura_get_and_reset_counters";
@@ -121,7 +121,7 @@ public interface CodeProvider {
 	 * 	 cobertura_counters.increment(counterIdToIncrement);
 	 * }
 	 * </pre>
-	 * <p/>
+	 *
 	 * This snippet is used in switch case of switch statement. We have a label and we want to ensure that
 	 * we are executing the label in effect of switch statement-jump, and not other JUMP or fall-throught.
 	 */

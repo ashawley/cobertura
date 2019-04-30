@@ -30,7 +30,7 @@ import org.objectweb.asm.MethodVisitor;
 
 /**
  * <p>Interfaces of listener that is called if interesting 'place' is found in instrumented/analyzed code</p>
- * <p/>
+ *
  * It is guaranteed that the same 'eventIds' will be used for the same events (in the case of identical source byte-code),
  * so you can use this ids to identify the same places between different passes of instrumentation.
  *
@@ -47,7 +47,7 @@ public interface TouchPointListener {
 
 	/**
 	 * <p>Before code responsible for realizing 'interesting' JUMP </p>
-	 * <p/>
+	 *
 	 * <p>JUMP event is not called in case of GOTO and RETURN instruction (not conditional JUMPS)</p>
 	 *
 	 * @param eventId           - id of the detected event.
@@ -60,7 +60,7 @@ public interface TouchPointListener {
 
 	/**
 	 * <p>Called after code responsible for realizing 'interesting' JUMP </p>
-	 * <p/>
+	 *
 	 * <p>JUMP event is not called in case of GOTO and RETURN instruction (not conditional JUMPS)</p>
 	 *
 	 * @param eventId           - id of the detected event.
@@ -88,7 +88,7 @@ public interface TouchPointListener {
 	/**
 	 * <p>If we determined that some line should be not 'counted' by cobertura (for example the line might be specified in {@link AbstractFindTouchPointsClassInstrumenter#ignoreRegexp})
 	 * we call this method.</p>
-	 * <p/>
+	 *
 	 * It's possible that {@link #afterLineNumber(int, Label, int, MethodVisitor, String, String)} event will be (or has been already) fired.
 	 *
 	 * @param eventId     - id of the event connected to the line (the same eventId that might be used for the line in {@link #afterLineNumber(int, Label, int, MethodVisitor, String, String)})

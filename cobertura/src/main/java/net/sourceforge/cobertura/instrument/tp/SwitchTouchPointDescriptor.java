@@ -33,16 +33,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Class representing a touch-point connected to a a SWITCH instruction in a source-code
- * <p/>
- * <p>A SWITCH touch-point uses one more counter then distinct number destination labels ({@link #getCountersForLabelsCnt()}).<br/>
+ *
+ * <p>A SWITCH touch-point uses one more counter then distinct number destination labels ({@link #getCountersForLabelsCnt()}).<br>
  * One 'internal' counterId ({@link #counterId}) is a special identifier of SWITCH statement (used in runtime), but in fact we don't expect any
  * incrementation of the counter. We implemented this to use a counterId because we are storing the value inside 'internal variable' and we need to be sure
- * that the value is connected to the last seen SWITCH statement.<br/>
- * <p/>
+ * that the value is connected to the last seen SWITCH statement.<br>
+ *
  * Or other counterIds represents different branches (different destination labels of the switch).
  * </p>
- * <p/>
- * <p>We also storing a {@link #methodName} and a {@link #methodSignature} (consider to move this fields into {@link TouchPointDescriptor}).
+ *
+ * <p>We also storing a {@link LineTouchPointDescriptor#methodName} and a {@link LineTouchPointDescriptor#methodSignature} (consider to move this fields into {@link TouchPointDescriptor}).
  * Those fields are needed to properly create instance of {@link LineData}. </p>
  *
  * @author piotr.tabor@gmail.com

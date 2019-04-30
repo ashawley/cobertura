@@ -41,26 +41,26 @@ import java.util.Vector;
 
 /**
  * A general purpose class with a variety of support and convenience methods.
- * <p/>
+ *
  * <p> There are different groups of methods in this class:
  * <br>
  * <br><a href="#print(char)">print methods</a> - convenience methods for System.out.print etc. that additionally make sure output is gets flushed immediately.
  * <br><a href="#isEmpty(java.lang.String)">string methods</a>
  * <br><a href="#concat(java.util.Vector)">string/vector converter methods</a>
  * <br><a href="#getConstantObject()">miscellaneous methods</a>
- * <p/>
- * <p/>
+ *
+ *
  * Some basic but none the less the most used methods by myself are:<br>
  * - {@link #isEmpty(java.lang.String) isEmpty}<br>
  * - {@link #stringToLines(java.lang.String) stringToLines}<br>
  * - {@link #sleep(int) sleep}<br>
- * <p/>
+ *
  *
  * @author <a href="http://www.kclee.com/clemens/">
  *         Chr. Clemens Lee</a>
  *         &lt;<a href="mailto:clemens@kclee.com">
  *         clemens@kclee.com
- *         </a>>
+ *         </a>&gt;
  */
 
 /*
@@ -86,7 +86,7 @@ public class Util {
 	// -----------------------------------------------------
 
 	/**
-	 * panicIf <=> not assert. Throws ApplicationException if true.
+	 * panicIf &lt;=&gt; not assert. Throws ApplicationException if true.
 	 * It's not necessary to catch this exception.
 	 */
 	public static void panicIf(boolean bPanic_) {
@@ -96,7 +96,7 @@ public class Util {
 	}
 
 	/**
-	 * panicIf <=> not assert. Throws ApplicationException if true.
+	 * panicIf &lt;=&gt; not assert. Throws ApplicationException if true.
 	 * It's not necessary to catch this exception.
 	 *
 	 * @param sMessage_ The error message for the Exception.

@@ -39,7 +39,7 @@ public abstract class StringUtil {
 	 * Replaces all instances of "replace" with "with" from the "original"
 	 * string.
 	 * </p>
-	 * <p/>
+	 *
 	 * <p>
 	 * NOTE: it is known that a similar function is included in jdk 1.4 as replaceAll(),
 	 * but is written here so as to allow backward compatibility to users using SDK's

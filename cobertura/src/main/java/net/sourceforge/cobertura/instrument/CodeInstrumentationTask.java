@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
  * <p>
  * Add coverage instrumentation to existing classes.
  * </p>
- * <p/>
+ *
  * <h3>What does that mean, exactly?</h3>
  * <p>
  * It means Cobertura will look at each class you give it.  It
@@ -26,13 +26,13 @@ import org.slf4j.LoggerFactory;
  * Cobertura adds a few extra instructions.  These instructions
  * do the following:
  * </p>
- * <p/>
+ *
  * <ol>
  * <li>Get an instance of the ProjectData class.</li>
  * <li>Call a method in this ProjectData class that increments
  * a counter for this line of code.
  * </ol>
- * <p/>
+ *
  * <p>
  * After every line in a class has been "instrumented," Cobertura
  * edits the bytecode for the class one more time and adds

@@ -62,7 +62,7 @@ import java.util.regex.Pattern;
  * Allows complexity computing for source files, packages and a whole project. Average
  * McCabe's number for methods contained in the specified entity is returned. This class
  * depends on FileFinder which is used to map source file names to existing files.
- * <p/>
+ *
  * <p>One instance of this class should be used for the same set of source files - an
  * object of this class can cache computed results.</p>
  *
@@ -403,7 +403,7 @@ public class ComplexityCalculator {
 
 	/**
 	 * Strip the type parameters from the signature with parameterized types. Spaces are preserved.
-	 * <p/>
+	 *
 	 * E.g. {@code stripTypeParamaters("List<String> a, Map<String, List<? extends Person>> b, int c")} returns {@code "List, Map, int"}.
 	 *
 	 * @param signature the signature with parameterized types which needs to be stripped
@@ -437,10 +437,10 @@ public class ComplexityCalculator {
 	 * Match the {@code candidate} signature against the {@code golden} signature and return the match confidence.
 	 * A signature, for the scope of this method, is just the string of method parameter types; for e.g. signature for method
 	 * {@code public void process(List<String> names, int[] scores)} is {@code java.util.List, int[]}.
-	 * <p/>
-	 * Formula for calculating the return value is:<br/>
-	 * Match Confidence = Average of Individual Parameter Type Match Percents<br/>
-	 * <p/>
+	 *
+	 * Formula for calculating the return value is:<br>
+	 * Match Confidence = Average of Individual Parameter Type Match Percents<br>
+	 *
 	 * Important: As indicated by the formula, do not compare the confidences across different golden signatures since the confidence values are not
 	 * absolute.
 	 *

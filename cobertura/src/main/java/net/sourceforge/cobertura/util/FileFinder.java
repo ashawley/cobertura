@@ -38,8 +38,8 @@ import org.slf4j.LoggerFactory;
  * Maps source file names to existing files. After adding description
  * of places files can be found in, it can be used to localize
  * the files.
- * <p/>
- * <p/>
+ *
+ *
  * FileFinder supports two types of source files locations:
  * <ul>
  * <li>source root directory, defines the directory under
@@ -74,7 +74,7 @@ public class FileFinder {
 	 * fileFinder.addSourceDirectory( "C:/MyProject/src/test");
 	 * </pre>
 	 * In path both / and \ can be used.
-	 * </p>
+	 * 
 	 *
 	 * @param directory The root of source files
 	 *
@@ -101,7 +101,6 @@ public class FileFinder {
 	 * fileFinder.addSourceFile( "C:/MyProject/src/test", "com/app/MyClassTest.java");
 	 * </pre>
 	 * In paths both / and \ can be used.
-	 * </p>
 	 *
 	 * @param baseDir sources root directory
 	 * @param file    path to source file relative to <code>baseDir</code>

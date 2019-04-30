@@ -34,28 +34,28 @@ import java.util.LinkedList;
 /**
  * <p>Represents a single 'footprint' of some piece of ASM code. Is used to detect if two
  * code pieces are (nearly) the same or different.</p>
- * <p/>
- * <p>During duplicate-detection we create {@link CodeFootstamp} for every block found starting with LINENUMBER directive.<br/>
+ *
+ * <p>During duplicate-detection we create {@link CodeFootstamp} for every block found starting with LINENUMBER directive.<br>
  * We appends to the {@link CodeFootstamp} all found 'jvm asm' instructions. When we found the end of the block (start of next line) we need to
  * call {@link #finalize()}.  After that we are allowed to use {@link #hashCode()}, {@link #equals(Object)} and {@link #isMeaningful()} methods
  * to compare two blocks and decide if they are duplicates or not.
  * </p>
- * <p/>
+ *
  * We find two {@link CodeFootstamp} as duplicates not only when they are completely identical, but also if:
  * <ul>
  * <li> They start with another number of 'LABEL' instructions (see {@link #trimableIfFirst(String)})</li>
  * <li> They differs in last instruction being  'LABEL', 'GOTO', 'RETURN' or 'ATHROW'  (see {@link #trimableIfLast(String)})</li>
  * <li> They use different destination labels for JUMPs and SWITCHES</li>
  * </ul>
- * <p/>
+ *
  * <p> You should also use {@link #isMeaningful()} method to avoid comparing two {@link CodeFootstamp} that are two short (for example empty).
  * They would be probably found this snapshot as 'equal', but in fact the snapshoots are too short to proof anything.
  * </p>
- * <p/>
+ *
  * <p>At the implementation level we encode all found instructions into list of String {@link #events} and we are comparing those string list.
  * It's not beautiful design - but its simple and works.
  * </p>
- * <p/>
+ *
  * <p>This class implements {@link #equals(Object)} and {@link #hashCode()} so might be used as key in maps</p>
  */
 public class CodeFootstamp {

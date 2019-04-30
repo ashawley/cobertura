@@ -28,7 +28,7 @@ import java.util.Properties;
 
 /**
  * A Utility Class to load the configuration.
- * <p/>
+ *
  * Checks for values using the following hierarchy.
  * 1) System Property matching key.
  * 2) cobertura.properties Resource Property matching key.

@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  * Annotation which indicates that a particular construct should be ignored by Cobertura's instrumentation and
  * metrics. CoberturaIgnored will ensure that all code (lines and branches) within its scope are excepted from
  * instrumentation, implying the following semantics when annotating a particular scope:
- * <p/>
+ *
  * <dl>
  * <dt>Method annotation</dt>
  * <dd>The lines within the annotated Method will not be instrumented.</dd>

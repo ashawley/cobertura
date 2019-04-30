@@ -64,13 +64,13 @@ abstract class AntUtil {
 	/**
 	 * Used to transfer the net.sourceforge.cobertura.datafile property to a JVM
 	 * that is about to be forked.
-	 * <p/>
+	 *
 	 * This is confusing, but it's required by our functional test.
 	 * What happens is, we have a JUnit test that runs ant to
 	 * instrument some classes.  When the instrumentation is running,
 	 * we want to get the coverage info that is created by exercising
 	 * our instrumentation classes.
-	 * <p/>
+	 *
 	 * So we pass in two different coverage files:
 	 * 1. The coverage data file command line parameter.  This tells
 	 * the instrument task where to write the new coverage data.

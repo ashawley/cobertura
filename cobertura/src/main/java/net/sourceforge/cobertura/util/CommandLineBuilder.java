@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
  * Helper class for storing long command lines inside temporary file.
  * <p>
  * Typical usage:
- * <p/>
+ *
  * <pre>
  *  builder = new CommandLineBuilder();
  *  builder.addArg(&quot;--someoption&quot;);
@@ -46,17 +46,15 @@ import org.slf4j.LoggerFactory;
  *  doSomething(builder.getCommandLineFile());
  *  builder.dispose();
  * </pre>
- * <p/>
+ *
  * It will save options in <code>builder.getCommandLineFile()</code>. Options
  * will be stored one in a line. To retrieve options from file helper method can
  * be used (see documentation):
- * <p/>
+ *
  * <pre>
  * String[] args = CommandLineBuilder.preprocessCommandLineArguments(args);
  * </pre>
- * <p/>
- * </p>
- * <p/>
+ *
  * <p>
  * NOTICE: No protection against line separators in arguments, should be OK for
  * Cobertura needs.

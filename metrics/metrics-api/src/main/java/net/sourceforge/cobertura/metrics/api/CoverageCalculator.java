@@ -26,7 +26,7 @@ import net.sourceforge.cobertura.metrics.model.coverage.Rate;
 /**
  * Specification for how to calculate test coverage rates. Typical usage
  * would be along the lines in the example shown below:
- * <p/>
+ *
  * <pre>
  *     <code>
  *         // Acquire a CoverageCalculator

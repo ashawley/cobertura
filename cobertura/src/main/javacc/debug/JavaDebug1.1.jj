@@ -62,11 +62,11 @@ import net.sourceforge.cobertura.javancss.PackageMetric;
  * Java sources as well).
  *
  * @author    Sriram Sankar (original JavaCC grammar)
- *            , Chr. Clemens Lee <clemens@kclee.com> (JavaNCSS metrics)
+ *            , Chr. Clemens Lee &lt;clemens@kclee.com&gt; (JavaNCSS metrics)
  *            , additional counting of javadoc comments done by
- *              Emilio Gongora, <emilio@sms.nl> and
- *              Guillermo Rodriguez, <guille@sms.nl>.
- *            Anonymous class count patch by Vesa Karvonnen, <vesa_karvonen@hotmail.com> 2002-10-30.
+ *              Emilio Gongora, &lt;emilio@sms.nl&gt; and
+ *              Guillermo Rodriguez, &lt;guille@sms.nl&gt;.
+ *            Anonymous class count patch by Vesa Karvonnen, &lt;vesa_karvonen@hotmail.com&gt; 2002-10-30.
  * @version   2000-01-31 $Id: Java1.1.jj 159 2009-05-27 22:18:55Z hboutemy $
  */
 public class JavaParserDebug implements JavaParserInterface

@@ -49,14 +49,14 @@ public class AbstractFindTouchPointsClassInstrumenter extends ClassVisitor {
 	/**
 	 * We assign 'unique event identifiers' to every asm instruction or directive found in the file. Using the identifiers
 	 * we are able to distinguish if the instruction is the same as found in the other pass of instrumentation.
-	 * <p/>
+	 *
 	 * We will use this 'generator' to provide this identifiers. Remember to acquire identifiers using {@link AtomicInteger#incrementAndGet()} (not {@link AtomicInteger#getAndIncrement()}!!!)
 	 */
 	protected AtomicInteger eventIdGenerator = new AtomicInteger(0);
 
 	/**
 	 * We need to assign a unique lineId to every found 'LINENUMBER' directive in the asm code.
-	 * <p/>
+	 *
 	 * <p>Remember that there can exist such a scenario:
 	 * <pre>
 	 * LINENUMBER 15 L1  //assigned lineId=33
@@ -66,19 +66,18 @@ public class AbstractFindTouchPointsClassInstrumenter extends ClassVisitor {
 	 * LINENUMBER 15 L3  //assigned lineId=35
 	 * </pre>
 	 * This is a reason, why we are going to use this lineIds instead of just 'line number'
-	 * </p>
-	 * <p/>
+	 *
 	 * <p>We will use this 'generator' to provide this identifiers. Remember to acquire identifiers using {@link AtomicInteger#incrementAndGet()} (not {@link AtomicInteger#getAndIncrement()}!!!)</p>
-	 * <p/>
+	 *
 	 * <p>The {@link #lineIdGenerator} that generates the same identifiers is used by: {@link DetectDuplicatedCodeClassVisitor#lineIdGenerator}</p>
 	 */
 	protected final AtomicInteger lineIdGenerator = new AtomicInteger(0);
 
 	/**
-	 * <p>This is a map of found duplicates of line blocks. It's   (lineNumber -> (duplicate LineId -> orygin lineId))</p>
-	 * <p/>
+	 * <p>This is a map of found duplicates of line blocks. It's   (lineNumber -&gt; (duplicate LineId -&gt; orygin lineId))</p>
+	 *
 	 * <p>The duplicatedLinesMap can be created by a single pass of {@link DetectDuplicatedCodeClassVisitor} (read there for reasons of duplicated detection).</p>
-	 * <p/>
+	 *
 	 * <p>The {@link #duplicatedLinesMap} is used to generate the same events Id  for events that occurs in ASM code as distinc instructions, but are reason of compilation of the same source-code (finally blocks problem).
 	 */
 	protected final Map<Integer, Map<Integer, Integer>> duplicatedLinesMap;

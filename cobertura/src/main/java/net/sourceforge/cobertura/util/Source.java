@@ -50,7 +50,7 @@ public class Source {
 
 	/**
 	 * Close the source input stream and the archive if it came from one.
-	 * <p/>
+	 *
 	 * This will not throw anything.   Any throwable is caught and a warning is logged.
 	 */
 	public void close() {

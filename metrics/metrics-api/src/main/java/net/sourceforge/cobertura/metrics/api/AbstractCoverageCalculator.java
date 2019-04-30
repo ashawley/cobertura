@@ -47,7 +47,7 @@ public abstract class AbstractCoverageCalculator implements CoverageCalculator {
 
     /**
      * Retrieves the coverage rate for the supplied CoverageType.
-     * <p/>
+     *
      * The getRate method should be implemented to be atomic/synchronized, in regards
      * to any call to the addExecutionStep methods. In plain english, the internal state of this
      * AbstractCoverageCalculator subclass must be permitted to complete changing its internal

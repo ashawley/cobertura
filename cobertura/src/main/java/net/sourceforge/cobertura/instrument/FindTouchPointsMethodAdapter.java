@@ -49,7 +49,7 @@ public class FindTouchPointsMethodAdapter
 			ContextMethodAwareMethodAdapter {
 	/**
 	 * Source of identifiers for events.
-	 * <p/>
+	 *
 	 * <p>Remember to acquire identifiers using {@link AtomicInteger#incrementAndGet()} (not {@link AtomicInteger#getAndIncrement()}!!!)</p>
 	 */
 	private final AtomicInteger eventIdGenerator;
@@ -61,7 +61,7 @@ public class FindTouchPointsMethodAdapter
 
 	/**
 	 * Line number of current line.
-	 * <p/>
+	 *
 	 * <p>It it NOT lineId</pl>
 	 */
 	private int currentLine;
@@ -78,9 +78,9 @@ public class FindTouchPointsMethodAdapter
 
 	/**
 	 * Map of (line number -> (lineId -> List of eventIds)).
-	 * <p/>
+	 *
 	 * <p>For every line number, and for evere lineId in the line we store list of all generated events</p>
-	 * <p/>
+	 *
 	 * <p>When we will detect duplicated block of code in given line - instead of generating new eventIds we will
 	 * use the same events</p>
 	 */
@@ -165,7 +165,7 @@ public class FindTouchPointsMethodAdapter
 
 	/**
 	 * Processing information about new line.
-	 * <p/>
+	 *
 	 * Upgrades {@link #replyEventIdList} and {@link #saveEventIdList} and calls {@link TouchPointListener#afterLineNumber(int, Label, int, MethodVisitor, String, String)}
 	 */
 	public void visitLineNumber(int line, Label label) {

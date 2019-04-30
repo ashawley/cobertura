@@ -84,7 +84,7 @@ public abstract class AbstractCodeProvider implements CodeProvider {
 
 	/**
 	 * {@inheritDoc}
-	 * <p/>
+	 *
 	 * The code injected by this implementation just registers the class using {@link TouchCollector#registerClass(Class)}. This way, during the
 	 * execution, touch collector knows that is responsible to ask the class after execution about a current status of the counters.
 	 */
@@ -99,11 +99,11 @@ public abstract class AbstractCodeProvider implements CodeProvider {
 			.getInternalName(LightClassmapListener.class);
 
 	/**
-	 * {@inheritDoc}<br/><br/>
-	 * <p/>
+	 * {@inheritDoc}<br><br>
+	 *
 	 * Generates method (named  {@link #COBERTURA_CLASSMAP_METHOD_NAME}) with such a signature:
-	 * __cobertura_classmap( {@link LightClassmapListener} listener).</br>
-	 * <p/>
+	 * __cobertura_classmap( {@link LightClassmapListener} listener).<br>
+	 *
 	 * The method informs the listener about all lines, jumps and switches found, and about all counters tracking
 	 * the constructions.
 	 */
@@ -228,11 +228,11 @@ public abstract class AbstractCodeProvider implements CodeProvider {
 
 	/**
 	 * Generates code that is injected into static constructor of an instrumented class.
-	 * <p/>
+	 *
 	 * It is good place to initiate static fields inserted into a class ({@link #generateCountersField(ClassVisitor)}),
 	 * or execute other code that should be executed when the class it used for the first time. Registering the class in
 	 * {@link TouchCollector} would be a bright idea.
-	 * <p/>
+	 *
 	 * It is expected that all counter will be set to zero after that operation.
 	 *
 	 * @param mv           - {@link MethodVisitor} that is listener of code-generation events

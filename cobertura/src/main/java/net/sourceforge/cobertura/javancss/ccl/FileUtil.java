@@ -41,11 +41,11 @@ import java.io.*;
 
 /**
  * Utility class for file operations.<p>
- * <p/>
+ *
  * Simple but most commonly used methods of this class are:<br>
  * - {@link #readFile(java.lang.String) readFile}<br>
  * - {@link #concatPath(java.lang.String, java.lang.String) concatPath}<br>
- * <p/>
+ *
  * Other less frequently used but still handy methods are:<br>
  * - {@link #normalizeFileName(java.lang.String) normalizeFileName} to take the current user directory into account via the 'user.dir' system property<br>
  *
@@ -53,7 +53,7 @@ import java.io.*;
  *         Chr. Clemens Lee</a>
  *         &lt;<a href="mailto:clemens@kclee.com">
  *         clemens@kclee.com
- *         </a>>
+ *         </a>&gt;
  * @version $Id: FileUtil.java 384 2006-03-17 20:10:49Z thekingant $
  */
 /*
@@ -74,10 +74,10 @@ public class FileUtil {
 	 * necessary it adds a File.separator between the path
 	 * and file name. For example "/home" or "/home/" and "clemens" both
 	 * become "/home/clemens".<p>
-	 * <p/>
+	 *
 	 * This method is inspired from the FrIJDE project out
 	 * of the gCollins.File.FileTools class.<p>
-	 * <p/>
+	 *
 	 * FrIJDE Homepage:
 	 * http://amber.wpi.edu/~thethe/Document/Besiex/Java/FrIJDE/
 	 *
@@ -106,7 +106,7 @@ public class FileUtil {
 
 	/**
 	 * Reads a File and returns the content in a String.
-	 * CRLF -> LF conversion takes place. This is a convenience method so you don't
+	 * CRLF -&gt; LF conversion takes place. This is a convenience method so you don't
 	 * need to bother creating a file reader object and closing it after it has
 	 * been used.
 	 *

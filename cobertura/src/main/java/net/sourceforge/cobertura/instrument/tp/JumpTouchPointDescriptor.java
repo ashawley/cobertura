@@ -29,12 +29,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Class representing a touch-point connected to a JUMP instruction in source-code.
- * <p/>
- * <p>A JUMP touch-point have assigned two counters:
+ *
+ * <p>A JUMP touch-point have assigned two counters:</p>
  * <ul>
  * <li>TRUE - touched in case when jump condition is meet</li>
  * <li>FALSE - touched when jump condition is not meet</li>
- * </ul></p>
+ * </ul>
  *
  * @author piotr.tabor@gmail.com
  */

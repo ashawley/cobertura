@@ -35,10 +35,10 @@ import java.lang.reflect.Method;
 /**
  * This class controls access to any file so that multiple JVMs will
  * not be able to write to the file at the same time.
- * <p/>
+ *
  * A file called "filename.lock" is created and Java's FileLock class
  * is used to lock the file.
- * <p/>
+ *
  * The java.nio classes were introduced in Java 1.4, so this class
  * does a no-op when used with Java 1.3.  The class maintains
  * compatability with Java 1.3 by accessing the java.nio classes

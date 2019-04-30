@@ -38,7 +38,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Detects duplicates in a single analyzed method of ASM code. Applies found information about
  * duplicates into {@link #duplicatesCollector} structure.
- * <p/>
+ *
  * See {@link DetectDuplicatedCodeClassVisitor} about reasons for the class.
  *
  * @author piotr.tabor@gmail.com
@@ -90,7 +90,7 @@ public class DetectDuplicatedCodeMethodVisitor
 
 	/**
 	 * <p>Starts a new block and assigns a new {@link #currentLineFootstamp}.</p>
-	 * <p/>
+	 *
 	 * <p>Put's the new {@link LineIdWithCodeFootstamp} into {@link #line2label2codefootstamp}
 	 */
 	@Override

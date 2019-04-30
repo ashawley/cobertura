@@ -50,10 +50,10 @@ import net.sourceforge.cobertura.javancss.parser.debug.JavaParserDebug;
  * this class is the brain. This class controls input and output and
  * invokes the Java parser.
  *
- * @author    Chr. Clemens Lee <clemens@kclee.com>
+ * @author    Chr. Clemens Lee &lt;clemens@kclee.com&gt;
  *            , recursive feature by Pxxkx Hannu
- *            , additional javadoc metrics by Emilio Gongora <emilio@sms.nl>
- *            , and Guillermo Rodriguez <guille@sms.nl>.
+ *            , additional javadoc metrics by Emilio Gongora &lt;emilio@sms.nl&gt;
+ *            , and Guillermo Rodriguez &lt;guille@sms.nl&gt;.
  * @version   $Id$
  */
 public class Javancss

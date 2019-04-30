@@ -29,6 +29,7 @@ import net.sourceforge.cobertura.CoverageIgnore;
 import net.sourceforge.cobertura.instrument.AbstractFindTouchPointsClassInstrumenter;
 import net.sourceforge.cobertura.instrument.FindTouchPointsMethodAdapter;
 import net.sourceforge.cobertura.instrument.HistoryMethodAdapter;
+import net.sourceforge.cobertura.instrument.pass1.DetectDuplicatedCodeClassVisitor;
 import net.sourceforge.cobertura.instrument.pass3.CodeProvider;
 import net.sourceforge.cobertura.instrument.tp.ClassMap;
 import org.objectweb.asm.*;
@@ -41,7 +42,7 @@ import java.util.regex.Pattern;
 /**
  * <p>Analyzes given class. Builds {@link ClassMap} that represents any touch-points and other important information
  * for instrumentation.</p>
- * <p/>
+ *
  * This instrumenter ({@link ClassVisitor}) does not change the bytecode of the class. It makes only analyzys and fills {@link ClassMap}.
  *
  * @author piotr.tabor@gmail.com

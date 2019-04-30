@@ -23,7 +23,7 @@ package net.sourceforge.cobertura.javancss;
 /**
  * Basic data class to store all metrics attached to a package.
  *
- * @author  Chr. Clemens Lee <clemens@kclee.com>
+ * @author  Chr. Clemens Lee &lt;clemens@kclee.com&gt;
  * @version $Id$
  */
 public class PackageMetric

@@ -31,9 +31,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Class representing a touch-point connected to a single line of source-code
- * <p/>
+ *
  * <p>A LINE touch-point have assigned only one counter.</p>
- * <p/>
+ *
  * <p>We also storing a {@link #methodName} and a {@link #methodSignature} (consider to move this fields into {@link TouchPointDescriptor}).
  * Those fields are needed to properly create instance of {@link LineData}. </p>
  *

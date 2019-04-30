@@ -86,7 +86,7 @@ public abstract class AbstractBranchCoverage<T extends AbstractBranchCoverage>
 
     /**
      * {@inheritDoc}
-     * <p/>
+     *
      * TODO: Move to API, to make the model simpler? (This is just a calculation of known data).
      */
     @Override

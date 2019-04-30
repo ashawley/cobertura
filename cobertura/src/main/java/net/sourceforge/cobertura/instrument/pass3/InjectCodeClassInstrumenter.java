@@ -27,6 +27,8 @@ package net.sourceforge.cobertura.instrument.pass3;
 
 import net.sourceforge.cobertura.instrument.AbstractFindTouchPointsClassInstrumenter;
 import net.sourceforge.cobertura.instrument.FindTouchPointsMethodAdapter;
+import net.sourceforge.cobertura.instrument.pass1.DetectDuplicatedCodeClassVisitor;
+import net.sourceforge.cobertura.instrument.pass2.BuildClassMapClassVisitor;
 import net.sourceforge.cobertura.instrument.tp.ClassMap;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -41,7 +43,7 @@ import java.util.regex.Pattern;
 
 /**
  * <p>This class is responsible for real instrumentation of the user's class.</p>
- * <p/>
+ *
  * <p>It uses information acquired
  * by {@link BuildClassMapClassVisitor} ( {@link #classMap} ) and
  * {@link DetectDuplicatedCodeClassVisitor} and injects
@@ -64,7 +66,7 @@ public class InjectCodeClassInstrumenter
 
 	/**
 	 * {@link CodeProvider} used to generate pieces of asm code that is injected into instrumented class.
-	 * <p/>
+	 *
 	 * We are strictly recommending here using {@link FastArrayCodeProvider} instead of {@link AtomicArrayCodeProvider} because
 	 * of performance.
 	 */
@@ -72,7 +74,7 @@ public class InjectCodeClassInstrumenter
 
 	/**
 	 * When we processing the class we want to now if we processed 'static initialization block' (clinit method).
-	 * <p/>
+	 *
 	 * <p>If there is no such a method in the instrumented class - we will need to generate it at the end</p>
 	 */
 	private boolean wasStaticInitMethodVisited = false;
@@ -114,10 +116,6 @@ public class InjectCodeClassInstrumenter
 
 	/**
 	 * <p>Instrumenting a code in a single method. Special conditions for processing 'static initialization block'.</p>
-	 * <p/>
-	 * <p>This method also uses {@link ShiftVariableMethodAdapter} that is used firstly to calculate the index of internal
-	 * variable injected to store information about last 'processed' jump or switch in runtime ( {@link ShiftVariableMethodAdapter#calculateFirstStackVariable(int, String)} ),
-	 * and then is used to inject code responsible for keeping the variable and shifting (+1) all previously seen variables.
 	 */
 	@Override
 	public MethodVisitor visitMethod(int access, String name, String desc,
@@ -169,7 +167,7 @@ public class InjectCodeClassInstrumenter
 	}
 
 	/**
-	 * <p>If there was no 'static initialization block' in the class, the method is responsible for generating the method.<br/>
+	 * <p>If there was no 'static initialization block' in the class, the method is responsible for generating the method.<br>
 	 * It is also responsible for generating method that keeps mapping of counterIds into source places connected to them</p>
 	 */
 	@Override

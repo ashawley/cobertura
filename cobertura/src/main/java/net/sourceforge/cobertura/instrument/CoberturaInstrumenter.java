@@ -30,6 +30,7 @@ import net.sourceforge.cobertura.instrument.pass1.DetectDuplicatedCodeClassVisit
 import net.sourceforge.cobertura.instrument.pass1.DetectIgnoredCodeClassVisitor;
 import net.sourceforge.cobertura.instrument.pass2.BuildClassMapClassVisitor;
 import net.sourceforge.cobertura.instrument.pass3.InjectCodeClassInstrumenter;
+import net.sourceforge.cobertura.instrument.tp.ClassMap;
 import net.sourceforge.cobertura.util.IOUtil;
 
 import org.objectweb.asm.ClassReader;
@@ -44,14 +45,14 @@ import java.util.regex.Pattern;
 
 /**
  * Class that is responsible for the whole process of instrumentation of a single class.
- * <p/>
+ *
  * The class is instrumented in tree passes:
  * <ol>
  * <li>Read only: {@link DetectDuplicatedCodeClassVisitor} - we look for the same ASM code snippets
  * rendered in different places of destination code</li>
  * <li>Read only: {@link BuildClassMapClassVisitor} - finds all touch-points and other interesting
  * information that are in the class and store it in {@link ClassMap}.
- * <li>Real instrumentation: {@link InjectCodeClassInstrumenter}. Uses {#link ClassMap} to inject
+ * <li>Real instrumentation: {@link InjectCodeClassInstrumenter}. Uses {@link ClassMap} to inject
  * code into the class</li>
  * </ol>
  *
@@ -64,7 +65,7 @@ public class CoberturaInstrumenter {
 	/**
 	 * During the instrumentation process we are feeling {@link ProjectData}, to generate from
 	 * it the *.ser file.
-	 * <p/>
+	 *
 	 * We now (1.10+) don't need to generate the file (it is not necessery for reporting), but we still
 	 * do it for backward compatibility (for example maven-cobertura-plugin expects it). We should avoid
 	 * this some day.
@@ -110,16 +111,16 @@ public class CoberturaInstrumenter {
 	/**
 	 * Setting to true causes cobertura to use more strict threadsafe model that is significantly
 	 * slower, but guarantees that number of hits counted for each line will be precise in multithread-environment.
-	 * <p/>
+	 *
 	 * The option does not change measured coverage.
-	 * <p/>
+	 *
 	 * In implementation it means that AtomicIntegerArray will be used instead of int[].
 	 */
 	private boolean threadsafeRigorous;
 
 	/**
 	 * Analyzes and instruments class given by path.
-	 * <p/>
+	 *
 	 * <p>Also the {@link #projectData} structure is filled with information about the found touch-points</p>
 	 *
 	 * @param file - path to class that should be instrumented
@@ -148,7 +149,7 @@ public class CoberturaInstrumenter {
 
 	/**
 	 * Analyzes and instruments class given by inputStream
-	 * <p/>
+	 *
 	 * <p>Also the {@link #projectData} structure is filled with information about the found touch-points</p>
 	 *
 	 * @param inputStream - source of class to instrument	 *
@@ -237,10 +238,10 @@ public class CoberturaInstrumenter {
 
 	/**
 	 * Analyzes and instruments class given by file.
-	 * <p/>
+	 *
 	 * <p>If the {@link #destinationDirectory} is null, then the file is overwritten,
 	 * otherwise the class is stored into the {@link #destinationDirectory}</p>
-	 * <p/>
+	 *
 	 * <p>Also the {@link #projectData} structure is filled with information about the found touch-points</p>
 	 *
 	 * @param file - source of class to instrument

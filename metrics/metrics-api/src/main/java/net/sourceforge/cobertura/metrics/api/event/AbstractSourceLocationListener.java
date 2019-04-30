@@ -46,7 +46,7 @@ public abstract class AbstractSourceLocationListener implements SourceLocationLi
 
     /**
      * Adds a given number of execution steps ("hits"/"touches") to the supplied SourceLocation.
-     * <p/>
+     *
      * The addInternalExecutionSteps method should be implemented to be atomic/synchronized, in regards
      * to the data it updates. In plain english, the data updated by this SourceLocationListener
      * must fully change its internal storage state before this method returns.

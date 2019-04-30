@@ -56,7 +56,7 @@ public class ClassMap {
 
 	/**
 	 * Contains map of label into set of {@link JumpTouchPointDescriptor} or {@link SwitchTouchPointDescriptor} that the label could be destination of
-	 * <p/>
+	 *
 	 * <p>The labels used here are {@link Label} created during {@link BuildClassMapClassVisitor} pass. Don't try to compare it with labels created by other instrumentation passes.
 	 * Instead you should use eventId and {@link #eventId2label} to get the label created in the first pass and lookup using the label.</p>
 	 */
@@ -267,7 +267,7 @@ public class ClassMap {
 	}
 
 	/**
-	 * Returns map:   switchCounterId --> counterId
+	 * Returns map:   switchCounterId --&gt; counterId
 	 *
 	 * @param labelEventId
 	 *
@@ -303,7 +303,7 @@ public class ClassMap {
 	 * Iterates over all touch-points created during class analysis and assigns
 	 * hit-counter identifiers to each of the touchpoint (some of them needs mode then one
 	 * hit-counter).
-	 * <p/>
+	 *
 	 * <p>This class assign hit-counter ids to each touch-point and upgrades maxCounterId to
 	 * reflect the greatest assigned Id.
 	 */
@@ -352,7 +352,7 @@ public class ClassMap {
 
 	/**
 	 * Upgrades {@link ProjectData} to contain all information fount in class during class instrumentation.
-	 * <p/>
+	 *
 	 * <p>I don't like the idea o creating sar file during the instrumentation, but we need to do it,
 	 * to be compatible with tools that expact that (such a cobertura-maven-plugin)</p>
 	 *
